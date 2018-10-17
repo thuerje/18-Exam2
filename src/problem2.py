@@ -2,8 +2,8 @@
 Exam 2, problem 2.
 
 Authors: Dave Fisher, David Mutchler, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Jess Thuer.  October 2018.
+"""  # DONE 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import time
@@ -109,8 +109,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2a()
+    run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -196,10 +196,15 @@ def problem2a(triangle):
       :rtype: Triangle
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    t2a = triangle.a*2
+    t2b = triangle.b*2
+    t2c = triangle.c*2
+    t2 = Triangle(t2a, t2b, t2c)
+    return t2
 
 def run_test_problem2b():
     """ Tests the   problem2b   function. """
@@ -354,11 +359,16 @@ def problem2b(triangles):
       :rtype: int | float
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE 3. Implement and test this function.
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------
 
+    counter = 0
+    for k in range(len(triangles)):
+        area = triangles[k].get_area()
+        counter = counter + area
+    return counter
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
